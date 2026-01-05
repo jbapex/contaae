@@ -167,7 +167,7 @@ const MobileFullScreenMenu = ({
               <X className="w-6 h-6" />
             </Button>
           </header>
-          <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+          <nav className="flex-1 p-4 space-y-2 overflow-y-auto scrollbar-visible">
             {menuItems.map(item => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;
@@ -290,7 +290,7 @@ function Layout({
                   </AnimatePresence>
                 </div>
               </div>
-              <nav className="flex-1 px-2 py-4 space-y-2 overflow-y-auto">
+              <nav className="flex-1 px-2 py-4 space-y-2 overflow-y-auto scrollbar-visible">
                 {menuItems.map(item => {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.path;

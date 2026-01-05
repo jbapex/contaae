@@ -8,6 +8,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 const presets = [
+  { label: 'Todo período', range: null },
   { label: 'Hoje', range: { from: startOfToday(), to: endOfToday() } },
   { label: 'Ontem', range: { from: subDays(startOfToday(), 1), to: subDays(endOfToday(), 1) } },
   { label: 'Últimos 7 dias', range: { from: subDays(startOfToday(), 6), to: endOfToday() } },
@@ -48,7 +49,7 @@ export function DateRangePicker({ className, date, onDateChange }) {
                 format(date.from, "dd/MM/yy", { locale: ptBR })
               )
             ) : (
-              <span>Escolha um período</span>
+              <span>Todo período</span>
             )}
           </Button>
         </PopoverTrigger>
